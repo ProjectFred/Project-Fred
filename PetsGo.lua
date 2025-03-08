@@ -275,7 +275,7 @@ AutoBuyMerchants:NewToggle("Auto Buy Vending Machine", "Buys Everything From The
             [1] = "PotionVendingMachine"
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("VendingMachines_Purchase"):InvokeServer(unpack(args))
-            task.wait(10)
+            task.wait(20)
         end
     else  -- If the toggle is off
         getgenv().AutoBuyVendingMachine = false
@@ -316,7 +316,7 @@ local args = {
     [2] = 6
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
-            task.wait(60)
+            task.wait(360)
         end
     else  -- If the toggle is off
         getgenv().StandardMerchant = false
