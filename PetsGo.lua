@@ -155,7 +155,7 @@ AutoMine:NewToggle("Auto Mine Runic", "Auto Mines Runic", function(v)
 end)
 
 --Thieving Toggles
-AutoTheiveSection:NewButton("Busted Shack", "AutoThieves Busted Stall", function()
+AutoTheive:NewButton("Busted Shack", "AutoThieves Busted Stall", function()
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -166,7 +166,7 @@ AutoTheiveSection:NewButton("Busted Shack", "AutoThieves Busted Stall", function
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheiveSection:NewButton("Wooden Stall", "AutoThieves Wooden Stall", function()
+AutoTheive:NewButton("Wooden Stall", "AutoThieves Wooden Stall", function()
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -177,7 +177,7 @@ AutoTheiveSection:NewButton("Wooden Stall", "AutoThieves Wooden Stall", function
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheiveSection:NewButton("Stone Stall", "AutoThieves Stone Stall", function()
+AutoTheive:NewButton("Stone Stall", "AutoThieves Stone Stall", function()
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -188,7 +188,7 @@ AutoTheiveSection:NewButton("Stone Stall", "AutoThieves Stone Stall", function()
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheiveSection:NewButton("Marble Stall", "AutoThieves Marble Stall", function()
+AutoTheive:NewButton("Marble Stall", "AutoThieves Marble Stall", function()
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -199,7 +199,7 @@ AutoTheiveSection:NewButton("Marble Stall", "AutoThieves Marble Stall", function
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheiveSection:NewButton("Bronze Stall", "AutoThieves Bronze Stall", function()
+AutoTheive:NewButton("Bronze Stall", "AutoThieves Bronze Stall", function()
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -210,7 +210,7 @@ AutoTheiveSection:NewButton("Bronze Stall", "AutoThieves Bronze Stall", function
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheiveSection:NewButton("Advanced Stall", "AutoThieves Advanced Stall", function()
+AutoTheive:NewButton("Advanced Stall", "AutoThieves Advanced Stall", function()
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -221,7 +221,7 @@ AutoTheiveSection:NewButton("Advanced Stall", "AutoThieves Advanced Stall", func
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheiveSection:NewButton("Golden Stall", "AutoThieves Golden Stall", function()
+AutoTheive:NewButton("Golden Stall", "AutoThieves Golden Stall", function()
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -232,7 +232,7 @@ AutoTheiveSection:NewButton("Golden Stall", "AutoThieves Golden Stall", function
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheiveSection:NewButton("Royal Stall", "AutoThieves Royal Stall", function()
+AutoTheive:NewButton("Royal Stall", "AutoThieves Royal Stall", function()
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -243,7 +243,7 @@ AutoTheiveSection:NewButton("Royal Stall", "AutoThieves Royal Stall", function()
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheiveSection:NewButton("Hacker Stall", "AutoThieves Hacker Stall", function()
+AutoTheive:NewButton("Hacker Stall", "AutoThieves Hacker Stall", function()
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
