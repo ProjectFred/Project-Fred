@@ -6,6 +6,7 @@ local Auto = Window:NewTab("Auto Roll")
 local AutoRoll = Auto:NewSection("Auto Roll")
 local Auto2 = Window:NewTab("Auto Fish")
 local AutoFish = Auto2:NewSection("Auto Fish")
+local AutoCollectFishermanLoot = Auto2:NewSection("Auto Collect Fisherman Loot")
 local Auto3 = Window:NewTab("Auto Mine")
 local AutoMine = Auto3:NewSection("Auto Mine")
 local Auto4 = Window:NewTab("Auto Theive")
@@ -46,6 +47,14 @@ AutoFish:NewToggle("Auto Fish Boating", "Boating Fishing Area", function(v)
         game:GetService("ReplicatedStorage").Network.Fishing_Fish:InvokeServer("Boating")
         game:GetService("ReplicatedStorage").Network.Fishing_Success:FireServer()
         task.wait()
+    end
+end)
+
+AutoCollectFishermanLoot:NewToggle("Auto Collect Fisherman Loot", "Auto Collects The Loot Gained From The Fisherman", function(v)
+    getgenv().AutoFish = v
+    while getgenv().AutoFish do
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Fishing_FishermanClaim"):InvokeServer()
+        task.wait(30)
     end
 end)
 
