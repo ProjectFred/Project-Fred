@@ -41,6 +41,18 @@ AutoFish:NewToggle("Auto Fish Ice", "Ice Fishing Area", function(v)
     end
 end)
 
+AutoFish:NewToggle("Auto Fish Corrupted", "Corrupted Fishing Area", function(v)
+    getgenv().AutoFish = v
+    while getgenv().AutoFish do
+        local args = {
+            "Corrupted"
+        }
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Fishing_Fish"):InvokeServer(unpack(args))
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Fishing_Success"):FireServer()        
+        task.wait()
+    end
+end)
+
 AutoFish:NewToggle("Auto Fish Boating", "Boating Fishing Area", function(v)
     getgenv().AutoFish = v
     while getgenv().AutoFish do
@@ -171,7 +183,6 @@ AutoTheive:NewButton("Busted Shack", "AutoThieves Busted Stall", function()
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 1 | Busted Shack"].Model.Pad.PadGlow.Position
 
-    -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
@@ -182,7 +193,6 @@ AutoTheive:NewButton("Wooden Stall", "AutoThieves Wooden Stall", function()
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 2 | Wooden Stall"].Model.Pad.PadGlow.Position
 
-    -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
@@ -193,7 +203,6 @@ AutoTheive:NewButton("Stone Stall", "AutoThieves Stone Stall", function()
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 3 | Stone Stall"].Model.Pad.PadGlow.Position
 
-    -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
@@ -204,7 +213,6 @@ AutoTheive:NewButton("Marble Stall", "AutoThieves Marble Stall", function()
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 4 | Marble Stall"].Model.Pad.PadGlow.Position
 
-    -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
@@ -215,7 +223,6 @@ AutoTheive:NewButton("Bronze Stall", "AutoThieves Bronze Stall", function()
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 5 | Bronze Stall"].Model.Pad.PadGlow.Position
 
-    -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
@@ -226,7 +233,6 @@ AutoTheive:NewButton("Advanced Stall", "AutoThieves Advanced Stall", function()
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 6 | Advanced Stall"].Model.Pad.PadGlow.Position
 
-    -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
@@ -237,7 +243,6 @@ AutoTheive:NewButton("Golden Stall", "AutoThieves Golden Stall", function()
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 7 | Golden Stall"].Model.Pad.PadGlow.Position
 
-    -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
@@ -248,7 +253,6 @@ AutoTheive:NewButton("Royal Stall", "AutoThieves Royal Stall", function()
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 8 | Royal Stall"].Model.Pad.PadGlow.Position
 
-    -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
@@ -259,6 +263,5 @@ AutoTheive:NewButton("Hacker Stall", "AutoThieves Hacker Stall", function()
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 9 | Hacker Stall"].Model.Pad.PadGlow.Position
 
-    -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
