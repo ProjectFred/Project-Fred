@@ -285,8 +285,7 @@ end)
 AutoBuyMerchants:NewToggle("Auto Buy Standard Merchant", "Buys Everything From The Standard Merchant", function(v)
     if v then
         getgenv().StandardMerchant = true
-        while getgenv().StandardMerchant do
-            I    
+        while getgenv().StandardMerchant do    
             local args = {
             [1] = "StandardMerchant",
             [2] = 1
