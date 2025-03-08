@@ -275,9 +275,51 @@ AutoBuyMerchants:NewToggle("Auto Buy Vending Machine", "Buys Everything From The
             [1] = "PotionVendingMachine"
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("VendingMachines_Purchase"):InvokeServer(unpack(args))
-            task.wait(3)
+            task.wait(10)
         end
     else  -- If the toggle is off
         getgenv().AutoBuyVendingMachine = false
+    end
+end)
+
+AutoBuyMerchants:NewToggle("Auto Buy Standard Merchant", "Buys Everything From The Standard Merchant", function(v)
+    if v then
+        getgenv().StandardMerchant = true
+        while getgenv().StandardMerchant do
+            I    
+            local args = {
+            [1] = "StandardMerchant",
+            [2] = 1
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+            local args = {
+            [1] = "StandardMerchant",
+            [2] = 2
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+            local args = {
+            [1] = "StandardMerchant",
+            [2] = 3
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+            local args = {
+            [1] = "StandardMerchant",
+            [2] = 4
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+            local args = {
+            [1] = "StandardMerchant",
+            [2] = 5
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+            local args = {
+            [1] = "StandardMerchant",
+            [2] = 6
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+            task.wait(60)
+        end
+    else  -- If the toggle is off
+        getgenv().StandardMerchant = false
     end
 end)
