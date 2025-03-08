@@ -50,11 +50,11 @@ AutoFish:NewToggle("Auto Fish Boating", "Boating Fishing Area", function(v)
     end
 end)
 
-AutoCollectFishermanLoot:NewToggle("Auto Collect Fisherman Loot", "Auto Collects The Loot Gained From The Fisherman", function(v)
+AutoCollectFishermanLoot:NewToggle("Auto Collect Fisherman Loot Every 30 Secs", "Auto Collects The Loot Gained From The Fisherman Every 30 Seconds", function(v)
     getgenv().AutoFish = v
     while getgenv().AutoFish do
         game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Fishing_FishermanClaim"):InvokeServer()
-        task.wait(30)
+        task.wait(3)
     end
 end)
 
