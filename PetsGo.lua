@@ -11,6 +11,9 @@ local Auto3 = Window:NewTab("Auto Mine")
 local AutoMine = Auto3:NewSection("Auto Mine")
 local Auto4 = Window:NewTab("Auto Theive")
 local AutoTheive = Auto4:NewSection("Auto Theive")
+local AutoBuy = Window:NewTab("Auto Buy")
+local AutoBuyMerchants = AutoBuy:NewSection("Merchants")
+
 
 --AutoRoll Toggle
 AutoRoll:NewToggle("Auto Roll Pets", "AutoRolls", function(v)
@@ -261,4 +264,46 @@ AutoTheive:NewButton("Hacker Stall", "AutoThieves Hacker Stall", function()
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 9 | Hacker Stall"].Model.Pad.PadGlow.Position
 
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
+end)
+
+--AutoBuy
+AutoBuyMerchants:NewToggle("AutoBuyIndex", "AutoBuys Index", function(v)
+    if v then
+        getgenv().AutoBuyMerchants = true
+        while getgenv().AutoBuyMerchants do
+local args = {
+	"AdvancedIndexMerchant",
+	1
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
+local args = {
+	"AdvancedIndexMerchant",
+	2
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
+local args = {
+	"AdvancedIndexMerchant",
+	3
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
+local args = {
+	"AdvancedIndexMerchant",
+	4
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
+local args = {
+	"AdvancedIndexMerchant",
+	5
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
+local args = {
+	"AdvancedIndexMerchant",
+	6
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
+wait(30)
+end
+    else  -- If the toggle is off
+        getgenv().AutoBuyMerchants = false
+    end
 end)
