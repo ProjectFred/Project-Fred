@@ -267,7 +267,7 @@ AutoTheive:NewButton("Hacker Stall", "AutoThieves Hacker Stall", function()
 end)
 
 --AutoBuy
-AutoBuyMerchants:NewToggle("Auto Buy From Index", "Buys Everything From The Index Merchant", function(v)
+AutoBuyMerchants:NewToggle("Auto Buy Index", "Buys Everything From The Index Merchant", function(v)
     getgenv().AutoFish = v
     while getgenv().AutoFish do
         local args = {
