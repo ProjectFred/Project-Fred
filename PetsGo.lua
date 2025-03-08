@@ -11,7 +11,7 @@ local AutoMine = Auto3:NewSection("Auto Mine")
 local Auto4 = Window:NewTab("Auto Theive")
 local AutoTheive = Auto4:NewSection("Auto Theive")
 
---AutoStuff
+--AutoRoll Toggle
 AutoRoll:NewToggle("Auto Roll Pets", "AutoRolls", function(v)
     getgenv().Eggs_Roll = v
     while true do
@@ -21,6 +21,7 @@ AutoRoll:NewToggle("Auto Roll Pets", "AutoRolls", function(v)
     end
 end)
 
+--AutoFish Toggle
 AutoFish:NewToggle("Auto Fish Default", "Starter Fishing Area", function(v)
     getgenv().AutoFish = v
     while getgenv().AutoFish do
@@ -48,6 +49,7 @@ AutoFish:NewToggle("Auto Fish Boating", "Boating Fishing Area", function(v)
     end
 end)
 
+--AutoMine Toggle
 AutoMine:NewToggle("Auto Mine Dirt", "Auto Mines Dirt", function(v)
     if v then
         getgenv().AutoMine = true
@@ -152,12 +154,101 @@ AutoMine:NewToggle("Auto Mine Runic", "Auto Mines Runic", function(v)
     end
 end)
 
-AutoTheive:NewToggle("Auto Thieve Royal Stall", "Auto Thieves The Royal Stall", function(state)
+--Thieving Toggles
+AutoTheive:NewToggle("Busted Shack", "AutoThieves Busted Stall", function(state)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 1 | Busted Shack"].Model.Pad.PadGlow
+
+    -- Teleport the character
+    humanoidRootPart.CFrame = CFrame.new(targetPosition)
+end)
+
+AutoTheive:NewToggle("WoodenStall", "AutoThieves Wooden Stall", function(state)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 2 | Wooden Stall"].Model.Pad.PadGlow
+
+    -- Teleport the character
+    humanoidRootPart.CFrame = CFrame.new(targetPosition)
+end)
+
+AutoTheive:NewToggle("WoodenStall", "AutoThieves Stone Stall", function(state)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 3 | Stone Stall"].Model.Pad.PadGlow
+
+    -- Teleport the character
+    humanoidRootPart.CFrame = CFrame.new(targetPosition)
+end)
+
+AutoTheive:NewToggle("WoodenStall", "AutoThieves Marble Stall", function(state)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 4 | Marble Stall"].Model.Pad.PadGlow
+
+    -- Teleport the character
+    humanoidRootPart.CFrame = CFrame.new(targetPosition)
+end)
+
+AutoTheive:NewToggle("WoodenStall", "AutoThieves Bronze Stall", function(state)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 5 | Bronze Stall"].Model.Pad.PadGlow
+
+    -- Teleport the character
+    humanoidRootPart.CFrame = CFrame.new(targetPosition)
+end)
+
+AutoTheive:NewToggle("WoodenStall", "AutoThieves Advanced Stall", function(state)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 6 | Advanced Stall"].Model.Pad.PadGlow
+
+    -- Teleport the character
+    humanoidRootPart.CFrame = CFrame.new(targetPosition)
+end)
+
+AutoTheive:NewToggle("WoodenStall", "AutoThieves Golden Stall", function(state)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 7 | Golden Stall"].Model.Pad.PadGlow
+
+    -- Teleport the character
+    humanoidRootPart.CFrame = CFrame.new(targetPosition)
+end)
+
+AutoTheive:NewToggle("WoodenStall", "AutoThieves Royal Stall", function(state)
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
     local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 8 | Royal Stall"].Model.Pad.PadGlow.Position
+
+    -- Teleport the character
+    humanoidRootPart.CFrame = CFrame.new(targetPosition)
+end)
+
+AutoTheive:NewToggle("WoodenStall", "AutoThieves Hacker Stall", function(state)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 9 | Hacker Stall"].Model.Pad.PadGlow
 
     -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
