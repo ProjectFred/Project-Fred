@@ -248,7 +248,7 @@ AutoTheive:NewToggle("Hacker Stall", "AutoThieves Hacker Stall", function(state)
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 9 | Hacker Stall"].Model.Pad.PadGlow
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 9 | Hacker Stall"].Model.Pad.PadGlow.Position
 
     -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
