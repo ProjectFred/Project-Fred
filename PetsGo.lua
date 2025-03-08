@@ -54,7 +54,7 @@ AutoCollectFishermanLoot:NewToggle("Auto Collect Fisherman Loot Every 30 Secs", 
     getgenv().AutoFish = v
     while getgenv().AutoFish do
         game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Fishing_FishermanClaim"):InvokeServer()
-        task.wait(3)
+        task.wait(30)
     end
 end)
 
