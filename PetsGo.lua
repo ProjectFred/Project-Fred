@@ -357,7 +357,7 @@ local args = {
     [2] = 6
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
-            task.wait(5)
+            task.wait(30)
         end
     else  -- If the toggle is off
         getgenv().AutoBuyIceFishingMerchant = false
