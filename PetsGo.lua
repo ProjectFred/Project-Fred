@@ -34,6 +34,21 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
---Tabs
-local AutoTab = Window:CreateTab("AutoRoll", nil) -- Oren
-local AutoSection = AutoTab:CreateSection("AutoRollStuff") -- Oren
+--Tabs --Oren
+local AutoTab = Window:CreateTab("AutoRoll", nil)
+local AutoSection = AutoTab:CreateSection("AutoRollStuff")
+
+--Toggles
+local Toggle = AutoTab:CreateToggle({
+    Name = "AutoRoll",
+    CurrentValue = false,
+    Flag = "AutoRollFlag1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(value)
+        getgenv().Eggs_Roll = v
+        while true do
+            if getgenv().Eggs_Roll == false then return end
+            game:GetService("ReplicatedStorage").Network.Eggs_Roll:InvokeServer()
+            wait()
+        end
+    end,
+ })
