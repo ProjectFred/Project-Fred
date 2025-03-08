@@ -274,9 +274,7 @@ AutoBuyMerchants:NewToggle("Auto Buy Vending Machine", "Buys Everything From The
             local args = {
             [1] = "PotionVendingMachine"
             }
-
             game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("VendingMachines_Purchase"):InvokeServer(unpack(args))
-
             task.wait(3)
         end
     else  -- If the toggle is off
