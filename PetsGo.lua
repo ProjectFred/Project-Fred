@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Project Fred")
---a
+
 --AutoTab
 local Auto = Window:NewTab("Auto Roll")
 local AutoRoll = Auto:NewSection("Auto Roll")
@@ -267,39 +267,10 @@ AutoTheive:NewButton("Hacker Stall", "AutoThieves Hacker Stall", function()
 end)
 
 --AutoBuy
-AutoBuyMerchants:NewToggle("Auto Buy Index", "Buys Everything From The Index Merchant", function(v)
-    getgenv().AutoFish = v
-    while getgenv().AutoFish do
-        local args = {
-	"AdvancedIndexMerchant",
-	1
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-local args = {
-	"AdvancedIndexMerchant",
-	2
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-local args = {
-	"AdvancedIndexMerchant",
-	3
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-local args = {
-	"AdvancedIndexMerchant",
-	4
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-local args = {
-	"AdvancedIndexMerchant",
-	5
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-local args = {
-	"AdvancedIndexMerchant",
-	6
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
+AutoBuyMerchants:NewToggle("Auto Buy Vending Machine", "Buys Everything From The Vending Machine", function(v)
+    getgenv().AutoBuyMerchants = v
+    while getgenv().AutoBuyMerchants do
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("VendingMachines_Purchase"):InvokeServer(PotionVendingMachine)
         task.wait(30)
     end
 end)
