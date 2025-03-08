@@ -44,10 +44,7 @@ end)
 AutoFish:NewToggle("Auto Fish Corrupted", "Corrupted Fishing Area", function(v)
     getgenv().AutoFish = v
     while getgenv().AutoFish do
-        local args = {
-            "Corrupted"
-        }
-        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Fishing_Fish"):InvokeServer(unpack(args))
+        game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Fishing_Fish"):InvokeServer("Corrupted")
         game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Fishing_Success"):FireServer()        
         task.wait()
     end
