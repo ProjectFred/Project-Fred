@@ -270,7 +270,7 @@ end)
 AutoBuyMerchants:NewToggle("Auto Buy Vending Machine", "Buys Everything From The Vending Machine", function(v)
     getgenv().AutoBuyMerchants = v
     while getgenv().AutoBuyMerchants do
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("VendingMachines_Purchase"):InvokeServer(PotionVendingMachine)
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("VendingMachines_Purchase"):InvokeServer("PotionVendingMachine")
         task.wait(30)
     end
 end)
