@@ -166,7 +166,7 @@ AutoTheive:NewToggle("Busted Shack", "AutoThieves Busted Stall", function(state)
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheive:NewToggle("WoodenStall", "AutoThieves Wooden Stall", function(state)
+AutoTheive:NewToggle("Wooden Stall", "AutoThieves Wooden Stall", function(state)
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -177,7 +177,7 @@ AutoTheive:NewToggle("WoodenStall", "AutoThieves Wooden Stall", function(state)
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheive:NewToggle("WoodenStall", "AutoThieves Stone Stall", function(state)
+AutoTheive:NewToggle("Stone Stall", "AutoThieves Stone Stall", function(state)
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -188,7 +188,7 @@ AutoTheive:NewToggle("WoodenStall", "AutoThieves Stone Stall", function(state)
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheive:NewToggle("WoodenStall", "AutoThieves Marble Stall", function(state)
+AutoTheive:NewToggle("Marble Stall", "AutoThieves Marble Stall", function(state)
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -199,7 +199,7 @@ AutoTheive:NewToggle("WoodenStall", "AutoThieves Marble Stall", function(state)
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheive:NewToggle("WoodenStall", "AutoThieves Bronze Stall", function(state)
+AutoTheive:NewToggle("Bronze Stall", "AutoThieves Bronze Stall", function(state)
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -210,7 +210,7 @@ AutoTheive:NewToggle("WoodenStall", "AutoThieves Bronze Stall", function(state)
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheive:NewToggle("WoodenStall", "AutoThieves Advanced Stall", function(state)
+AutoTheive:NewToggle("Advanced Stall", "AutoThieves Advanced Stall", function(state)
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -221,7 +221,7 @@ AutoTheive:NewToggle("WoodenStall", "AutoThieves Advanced Stall", function(state
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheive:NewToggle("WoodenStall", "AutoThieves Golden Stall", function(state)
+AutoTheive:NewToggle("Golden Stall", "AutoThieves Golden Stall", function(state)
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -232,7 +232,7 @@ AutoTheive:NewToggle("WoodenStall", "AutoThieves Golden Stall", function(state)
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheive:NewToggle("WoodenStall", "AutoThieves Royal Stall", function(state)
+AutoTheive:NewToggle("Royal Stall", "AutoThieves Royal Stall", function(state)
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
@@ -243,7 +243,7 @@ AutoTheive:NewToggle("WoodenStall", "AutoThieves Royal Stall", function(state)
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
 end)
 
-AutoTheive:NewToggle("WoodenStall", "AutoThieves Hacker Stall", function(state)
+AutoTheive:NewToggle("Hacker Stall", "AutoThieves Hacker Stall", function(state)
     local player = game.Players.LocalPlayer
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
