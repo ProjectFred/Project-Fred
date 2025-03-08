@@ -275,9 +275,48 @@ AutoBuyMerchants:NewToggle("Auto Buy Vending Machine", "Buys Everything From The
             [1] = "PotionVendingMachine"
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("VendingMachines_Purchase"):InvokeServer(unpack(args))
-            task.wait(20)
+            task.wait(10)
         end
     else  -- If the toggle is off
         getgenv().AutoBuyVendingMachine = false
+    end
+end)
+
+AutoBuyMerchants:NewToggle("Auto Buy Fishing Merchant", "Buys Everything From The Fishing Merchant", function(v)
+    if v then
+        getgenv().AutoBuyFishingMerchant = true
+        while getgenv().AutoBuyFishingMerchant do
+        local args = {
+    [1] = "FishingMerchant",
+    [2] = 1
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+local args = {
+    [1] = "FishingMerchant",
+    [2] = 2
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+local args = {
+    [1] = "FishingMerchant",
+    [2] = 3
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+local args = {
+    [1] = "FishingMerchant",
+    [2] = 4
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+local args = {
+    [1] = "FishingMerchant",
+    [2] = 5
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+local args = {
+    [1] = "FishingMerchant",
+    [2] = 6
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
+task.wait(20)
+        getgenv().AutoBuyFishingMerchant = false
     end
 end)
