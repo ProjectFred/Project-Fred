@@ -2,7 +2,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Project Fred")
 
 --AutoTab
-local Auto = Window:NewTab("Auto Roll")
+local Auto1 = Window:NewTab("Auto Roll")
 local AutoRoll = Auto:NewSection("Auto Roll")
 local Auto2 = Window:NewTab("Auto Fish")
 local AutoFish = Auto2:NewSection("Auto Fish")
