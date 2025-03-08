@@ -160,7 +160,7 @@ AutoTheive:NewToggle("Busted Shack", "AutoThieves Busted Stall", function(state)
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 1 | Busted Shack"].Model.Pad.PadGlow
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 1 | Busted Shack"].Model.Pad.PadGlow.Position
 
     -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
@@ -171,7 +171,7 @@ AutoTheive:NewToggle("Wooden Stall", "AutoThieves Wooden Stall", function(state)
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 2 | Wooden Stall"].Model.Pad.PadGlow
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 2 | Wooden Stall"].Model.Pad.PadGlow.Position
 
     -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
@@ -182,7 +182,7 @@ AutoTheive:NewToggle("Stone Stall", "AutoThieves Stone Stall", function(state)
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 3 | Stone Stall"].Model.Pad.PadGlow
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 3 | Stone Stall"].Model.Pad.PadGlow.Position
 
     -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
@@ -193,7 +193,7 @@ AutoTheive:NewToggle("Marble Stall", "AutoThieves Marble Stall", function(state)
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 4 | Marble Stall"].Model.Pad.PadGlow
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 4 | Marble Stall"].Model.Pad.PadGlow.Position
 
     -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
@@ -204,7 +204,7 @@ AutoTheive:NewToggle("Bronze Stall", "AutoThieves Bronze Stall", function(state)
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 5 | Bronze Stall"].Model.Pad.PadGlow
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 5 | Bronze Stall"].Model.Pad.PadGlow.Position
 
     -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
@@ -215,7 +215,7 @@ AutoTheive:NewToggle("Advanced Stall", "AutoThieves Advanced Stall", function(st
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 6 | Advanced Stall"].Model.Pad.PadGlow
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 6 | Advanced Stall"].Model.Pad.PadGlow.Position
 
     -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
@@ -226,7 +226,7 @@ AutoTheive:NewToggle("Golden Stall", "AutoThieves Golden Stall", function(state)
     local character = player.Character
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 
-    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 7 | Golden Stall"].Model.Pad.PadGlow
+    local targetPosition = game:GetService("ReplicatedStorage").__DIRECTORY.ThievingObjects["ThievingObject 7 | Golden Stall"].Model.Pad.PadGlow.Position
 
     -- Teleport the character
     humanoidRootPart.CFrame = CFrame.new(targetPosition)
