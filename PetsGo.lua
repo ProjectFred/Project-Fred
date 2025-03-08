@@ -268,9 +268,18 @@ end)
 
 --AutoBuy
 AutoBuyMerchants:NewToggle("Auto Buy Vending Machine", "Buys Everything From The Vending Machine", function(v)
-    getgenv().AutoBuyMerchants = v
-    while getgenv().AutoBuyMerchants do
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("VendingMachines_Purchase"):InvokeServer("PotionVendingMachine")
-        task.wait(30)
+    if v then
+        getgenv().AutoBuyVendingMachine = true
+        while getgenv().AutoBuyVendingMachine do
+            local args = {
+            [1] = "PotionVendingMachine"
+            }
+
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("VendingMachines_Purchase"):InvokeServer(unpack(args))
+
+            task.wait(3)
+        end
+    else  -- If the toggle is off
+        getgenv().AutoBuyVendingMachine = false
     end
 end)
