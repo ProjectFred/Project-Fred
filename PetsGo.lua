@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Project Fred", "GrapeTheme")
+local Window = Library.CreateLib("Project Fred", "Midnight")
 
 --AutoTab
 local Auto = Window:NewTab("Auto Roll")
