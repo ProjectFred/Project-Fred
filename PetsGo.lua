@@ -300,6 +300,6 @@ local args = {
 	6
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-        task.wait()
+        task.wait(30)
     end
 end)
