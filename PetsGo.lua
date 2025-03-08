@@ -316,7 +316,7 @@ AutoBuyMerchants:NewToggle("Auto Buy Fishing Merchant", "Buys Everything From Th
     [2] = 6
 }
     game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("CustomMerchants_Purchase"):InvokeServer(unpack(args))
-        task.wait(20)
+        task.wait(10)
     end
 else
         getgenv().AutoBuyFishingMerchant = false
