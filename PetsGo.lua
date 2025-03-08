@@ -267,11 +267,10 @@ AutoTheive:NewButton("Hacker Stall", "AutoThieves Hacker Stall", function()
 end)
 
 --AutoBuy
-AutoBuyMerchants:NewToggle("AutoBuyIndex", "AutoBuys Index", function(v)
-    if v then
-        getgenv().AutoBuyMerchants = true
-        while getgenv().AutoBuyMerchants do
-local args = {
+AutoBuyMerchants:NewToggle("Auto Buy From Index", "Buys Everything From The Index Merchant", function(v)
+    getgenv().AutoFish = v
+    while getgenv().AutoFish do
+        local args = {
 	"AdvancedIndexMerchant",
 	1
 }
@@ -301,9 +300,6 @@ local args = {
 	6
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-wait(30)
-end
-    else  -- If the toggle is off
-        getgenv().AutoBuyMerchants = false
+        task.wait()
     end
 end)
