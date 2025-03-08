@@ -33,3 +33,7 @@ local Window = Rayfield:CreateWindow({
       Key = {"Sloth"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+
+--Tabs
+local AutoTab = Window:CreateTab("AutoRoll", nil) -- Oren
+local AutoSection = AutoTab:CreateSection("AutoRollStuff") -- Oren
